@@ -7,8 +7,6 @@ class Clase {
     }
   }
   
-  // console.log(Date.prototype.getHours());
-  
   const analisis = new Clase(
     "Análisis matemático",
     "https://eva.unl.edu.ec/mod/attendance/view.php?id=1490669",
@@ -92,10 +90,6 @@ class Clase {
   const Clases = [analisis, desarrollo, fundamentos, simulacion, sistemas];
   const horaAct = new Date();
   
-  // horaAct.setDate
-  horaAct.setHours(9);
-  horaAct.setMinutes(32);
-  
   const dias = ["0", "lunes", "martes", "miercoles", "jueves", "viernes"];
   
   const calculos = {};
@@ -131,7 +125,7 @@ class Clase {
   // logica ----------------------------------------------------------------------------------------------
   function clasesAutomatica() {
     if (!navigator.clipboard) {
-      alert("cambia esta verga de navegador");
+      alert("cambia de navegador");
       return;
     }
     for (const clase of Clases) {
@@ -147,7 +141,7 @@ class Clase {
             if (clase.asistencia != "") {
               setTimeout(() => {
                 abrirPesta(clase.asistencia);
-              }, 4000);
+              }, 1000);
             }
             setTimeout(() => {
               abrirPesta(clase.horario[key][2]);
@@ -181,75 +175,7 @@ class Clase {
     window.open(link);
   }
   
-  // console.log('Ejecutando Clases '+Clases.analisis.link);
-  
-  cambiarVideo = (vd = 0) => {
-    let videos = [
-      "../video/trilerspiderman.mp4",
-      "../video/trilervenom.mp4",
-      "../video/veritasium.mp4",
-      "../video/trailer.mp4",
-    ];
-    var video = document.getElementById("videoPrueba");
-    video.setAttribute("src", videos[vd]);
-    video.play();
-    cambiarSubtitulos(vd);
-  };
-  
-  cambiarSubtitulos = (cs = 0) => {
-    let subEn = [
-      "../video/subtitulos/noway-en.vtt",
-      "../video/subtitulos/venom-en.vtt",
-      "../video/subtitulos/veri-en.vtt",
-      "../video/subtitulos/subs-en.vtt",
-    ];
-    let subEs = [
-      "../video/subtitulos/noway-es.vtt",
-      "../video/subtitulos/venom-es.vtt",
-      "../video/subtitulos/venom-es.vtt",
-      "../video/subtitulos/subs-es.vtt",
-    ];
-  
-    var trac1 = document.getElementById("track1");
-    var trac2 = document.getElementById("track2");
-  
-    trac1.setAttribute("src", subEn[cs]);
-    trac2.setAttribute("src", subEs[cs]);
-  
-    console.log("si lo auto ejecuta");
-  };
-  
-  slider = (num = 1) => {
-    let a = -1,
-      b = -1,
-      c = -1,
-      d = -1;
-    switch (num) {
-      case 1:
-        a = 1;
-        break;
-      case 2:
-        b = 1;
-        break;
-      case 3:
-        c = 1;
-        break;
-      case 4:
-        d = 1;
-        break;
-      default:
-        a = 1;
-        break;
-    }
-    document.getElementById("slider1").style.opacity = a;
-    document.getElementById("slider1").style.zIndex = a;
-    document.getElementById("slider2").style.opacity = b;
-    document.getElementById("slider2").style.zIndex = b;
-    document.getElementById("slider3").style.opacity = c;
-    document.getElementById("slider3").style.zIndex = c;
-    document.getElementById("slider4").style.opacity = d;
-    document.getElementById("slider4").style.zIndex = d;
-  };
+  // console.log('Ejecutando Clases '+Clases.analisis.link)
   
   validarDatos = () => {
     let correo = document.getElementById("idcorreo").value;
@@ -275,66 +201,8 @@ class Clase {
     alert(`En el documento existen ${divs.length}# divs.`);
   };
   
-  presentar = () => {
-    // alert('Bienvenido a JavaScript');
-    var nombre = document.getElementById("name");
-    var apellido = document.getElementById("lastname");
-    var numero = document.getElementById("number");
-    // var fecha = document.getElementsByName('fecha');
-    // alert(typeof fecha);
   
-    //Primos
-    var primosxd = "> 2";
-    var n = 3;
-    while (n <= numero.value) {
-      var esPrimo = true;
-      for (var i = 2; i < n; i++) {
-        if (n % i === 0) {
-          esPrimo = false;
-          // continue;
-        }
-      }
-      if (esPrimo) primosxd += "," + n;
-      n++;
-    }
   
-    document.getElementById("parrafo").innerHTML = primosxd;
-  
-    alert(`Bienvenido ${nombre.value} ${apellido.value}, ${primosxd}`);
-  };
-  
-  operandos = () => {
-    var op1 = document.getElementById("operando1").value;
-    var op2 = document.getElementById("operando2").value;
-    return [op1, op2];
-  };
-  
-  presentar = (dato) => {
-    console.log(dato);
-    document.getElementById("resultado").innerHTML = dato;
-  };
-  
-  sumar = () => {
-    var op1 = operandos()[0],
-      op2 = operandos()[1];
-    presentar(op1 * 1 + op2 * 1);
-  };
-  
-  restar = () => {
-    var op1 = operandos()[0],
-      op2 = operandos()[1];
-    presentar((op1 - op2) * 1);
-  };
-  dividir = () => {
-    var op1 = operandos()[0],
-      op2 = operandos()[1];
-    presentar(op2 === 0 ? "Error" : (op1 / op2) * 1);
-  };
-  multiplicar = () => {
-    var op1 = operandos()[0],
-      op2 = operandos()[1];
-    presentar(op1 * op2 * 1);
-  };
   
   enviarPagina = (url = "miperfil.html") => {
     document.location = url;
@@ -412,28 +280,4 @@ class Clase {
     document.execCommand("copy");
     document.body.removeChild(aux);
     console.log("tambien entró XD");
-  }
-  
-  function PPcontrols() {
-    const tipo = document.getElementById("btnPausePlay").className;
-    const ctrlVideo = document.getElementById("videoPrueba");
-  
-    ctrlVideo.volume = 0.2;
-    if (tipo == "fas fa-play") {
-      document.getElementById("btnPausePlay").className = "fas fa-pause";
-      ctrlVideo.play();
-    } else if (tipo == "fas fa-pause") {
-      document.getElementById("btnPausePlay").className = "fas fa-play";
-      ctrlVideo.pause();
-    }
-  }
-  
-  function adelantar() {
-    const ctrlVideo = document.getElementById("videoPrueba");
-    ctrlVideo.currentTime += 10;
-  }
-  
-  function retroceder() {
-    const ctrlVideo = document.getElementById("videoPrueba");
-    ctrlVideo.currentTime -= 10;
   }
