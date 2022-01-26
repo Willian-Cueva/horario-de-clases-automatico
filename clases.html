@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/clases.css" />
+    <!-- <script src="js/script.js" type="module"></script> -->
+    <title>Horario de Clases</title>
+    
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="container_clases">
+        <div class="horario">
+          <img src="./imagenes/horario.jpg" alt="horario de clases">
+        </div>
+        <div
+        class="card"
+        style="
+            background-image: url('https://cdn.euroinnova.edu.es/img/subidasEditor/geometry-1044090_1920-1607081661.webp');
+            "
+        >
+        <div class="textos">
+          <h3>Análisis Numérico</h3>
+          <button onclick="abrirPestania(1)">Link Zoom</button>
+          <button onclick="abrirPestania(2)">Asistencia</button>
+        </div>
+      </div>
+      <div
+      class="card"
+      style="
+            background-image: url('https://cronuts.digital/wp-content/uploads/2018/12/glosario-terminos-digitales.png');
+            "
+        >
+        <div class="textos">
+          <h3>Desarrollo Basado en Plataformas DBP5A@2122</h3>
+          <button onclick="abrirPestania(3)">Clase En Eva</button>
+          <button onclick="abrirPestania(4)">Lunes 11h30</button>
+          <button onclick="abrirPestania(5)">Miercoles 09h30</button>
+          <button onclick="abrirPestania(6)">Jueves 07h30</button>
+          <button onclick="abrirPestania(7)">Viernes 09h30</button>
+          <div class="contra">Contraseña: <p id="dbp1">DBP5A@2122</p></div>
+          <button id="btnD" onclick="copiarAlPortapapeles('dbp1')">Copiar Contraseña Zoom</button>
+        </div>
+      </div>
+      <div
+      class="card"
+      style="
+            background-image: url('https://www.atlasconsultora.com/wp-content/uploads/2020/08/sistema-1200x480.jpg');
+            "
+        >
+        <div class="textos">
+          <h3>Simulación</h3>
+          <button onclick="abrirPestania(8)">Clase En Eva</button>
+          <button onclick="abrirPestania(9)">Lunes 07h30</button>
+          <button onclick="abrirPestania(10)">Martes 11h30</button>
+          <button onclick="abrirPestania(11)">Viernes 11h30</button>
+          <div class="contra">Contraseña: <p id="sml">UNL@2021</p></div>
+          <button id="btnS" onclick="copiarAlPortapapeles('sml')">Copiar Contraseña Zoom</button>
+        </div>
+      </div>
+      <div
+      class="card"
+      style="
+            background-image: url('https://i.pinimg.com/originals/4c/59/09/4c5909524b0a9604603d827b310cd24e.jpg');
+            "
+        >
+        <div class="textos">
+          <h3>Sistemas Digitales</h3>
+          <button onclick="abrirPestania(12)">Link Zoom</button>
+          <button onclick="abrirPestania(13)">Asistencia</button>
+        </div>
+      </div>
+      <div
+      class="card"
+      style="
+            background-image: url('https://morse-ti.net/wp-content/uploads/2019/12/network-redes-monterrey-morse.jpg');
+            "
+        >
+        <div class="textos">
+          <h3>Fundamentos de Redes de Comunicaciones</h3>
+          <button onclick="abrirPestania(14)">Link Zoom</button>
+          <button onclick="abrirPestania(15)">Asistencia</button>
+          <div class="contra">Contraseña: <p id="reds">M996751@</p></div>
+          <button id="btnF" onclick="copiarAlPortapapeles('reds')">Copiar Contraseña Zoom</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/script.js" type="text/javascript"></script>
+</body>
+</html>
