@@ -141,11 +141,11 @@ class Clase {
             if (clase.asistencia != "") {
               setTimeout(() => {
                 abrirPesta(clase.asistencia);
-              }, 1000);
+              }, 1);
             }
             setTimeout(() => {
               abrirPesta(clase.horario[key][2]);
-            }, 4000);
+            }, 10);
           }
         }
       }
